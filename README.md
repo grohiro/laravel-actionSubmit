@@ -67,13 +67,12 @@ Laravel ActionSubmit
 |attributes|array|submit tag attributes|
 
 ## Usage
-**global.php**
+**bootstrap/start.php**
 
 ```
 \Laravel\Extension\ActionSubmit\ActionSubmit::register();
 
-// Before load filters!
-require app_path().'/filters.php';
+require $app;
 ```
 
 -------------
@@ -103,6 +102,7 @@ ActionSubmit ではルートを取得する条件に Submit ボタンの name �
   * `Illuminate\Routing\Router` が使われてしまう
   * どうやら `global.php` で `filters.php` がロードされる前に `App::bind()` しないといけない
   * `App:bind()` はどこでも実行できるが、`router` や `request` などは初期化前に実行しておかないと無意味
+  * `global.php` でもだめなケースがあったので `bootstrap/start.php` に移動.
 
 
 * `App::bind('router', 'Laravel\Extension\ActionSubmit\Router')` が動かない
