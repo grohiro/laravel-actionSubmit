@@ -1,0 +1,15 @@
+{
+  "name": "grohiro/laravel-action-submit",
+  "description": "Laravel ActionSubmit button",
+  "keywords": ["laravel", "form", "action"],
+  "type": "helper",
+  "license": "MIT",
+  "homepage": "https://github.com/grohiro/laravel-actionSubmit",
+  "require": {
+  },
+  "autoload": {
+    "psr-0": {
+      "Grohiro\\LaravelActionSubmit": "src/"
+    }
+  }
+}

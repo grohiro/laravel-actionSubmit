@@ -1,5 +1,5 @@
 <?php
-namespace Laravel\Extension\ActionSubmit;
+namespace Grohiro\LaravelActionSubmit;
 
 /**
  * 指定のアクションを実行する submit ボタンを生成します.
@@ -20,7 +20,7 @@ class ActionSubmit
 {
   public static function register() {
 
-    \App::bind('router', '\Laravel\Extension\ActionSubmit\Router', true);
+    \App::bind('router', '\Grohiro\LaravelActionSubmit\Router', true);
 
     /**
      * 指定アクションへサブミットする(URL指定).

@@ -1,5 +1,5 @@
 <?php
-namespace Laravel\Extension\ActionSubmit;
+namespace Grohiro\LaravelActionSubmit;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Matching\UriValidator;
