@@ -35,7 +35,7 @@ class ActionSubmit
      * 指定アクションへサブミットする(ルート名指定).
      * Form::actionSubmitRoute('sample.user.list.download', 'ダウンロード');
      */
-    \Form::macro('actionSubmitRoute', function($route, $value = '', $patemeters = [], $attributes = []) {
+    \Form::macro('actionSubmitRoute', function($route, $value = '', $parameters = [], $attributes = []) {
       $action = app('url')->route($route, $parameters, false);
       $attributes['name'] = "_action".str_replace('/', '_', $action);
       return \Form::submit($value, $attributes);
@@ -45,7 +45,7 @@ class ActionSubmit
      * 指定アクションへサブミットする(アクション指定).
      * Form::actionSubmitAction('Sample\UserController@batchdownload', 'ダウンロード');
      */
-    \Form::macro('actionSubmitAction', function($action, $value = '', $patemeters = [], $attributes = []) {
+    \Form::macro('actionSubmitAction', function($action, $value = '', $parameters = [], $attributes = []) {
       $target = app('url')->action($action, $parameters, false);
       $attributes['name'] = "_action".str_replace('/', '_', $target);
       return \Form::submit($value, $attributes);
